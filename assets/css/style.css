@@ -1,0 +1,14 @@
+.top-panel {
+	width: 70%;
+    margin-left: 15%;
+}
+
+.bottom-panel {
+	width: 70%;
+    margin-left: 15%;
+}
+
+.header {
+	background-color: blue;
+	color: white;
+}
