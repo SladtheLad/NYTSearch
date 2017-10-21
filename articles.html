@@ -1,0 +1,21 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+url += '?' + $.param({
+  'api-key': "dfd2f5832b464b899010dcf0836e17fa",
+  'q': "trump"
+});
+$.ajax({
+  url: url,
+  method: 'GET',
+}).done(function(result) {
+  console.log(result);
+var r = result.response.docs;
+  for (var i = 0; i < r.length; i++) {
+  console.log(r[i].headline.main);
+  }
+}).fail(function(err) {
+  throw err;
+});
+</script>
